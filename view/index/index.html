@@ -1,0 +1,30 @@
+<script>
+    var ajax = new Util.Ajax({ url:'robots.txt?acd',logincheck: false });
+    //ajax.request({ aa:'bb', cc:'dd'});
+    $(function(){
+        var form = new Util.Form({
+            name:'myform',
+            subtn:'button'
+        });
+        var upld = new Util.Uploader({
+            button:'up'
+        });
+        upld.bind();
+        key = document.getElementById('upload-key');
+    });
+</script>
+{js file='uploader'}
+<form action='./' method="post" name="myform">
+    <input class="r3" type="text" name="username" />
+    <input type="text" name="smaile" />
+    <input type="button" value="submit" name="button" />
+    <input type="button" value='asdf' name="aaa" onclick="alert('asdf');" />
+</form>
+
+<br>
+<div>
+<div id="up">asfdsdf</div>
+<input type="button" id="upload-btn" class="btn btn-large clearfix" value="Choose file" />
+{progressbar id='progress'}
+</div>
+
